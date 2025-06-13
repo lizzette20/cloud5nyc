@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fde2e4,#e1e1f7,#deeaf3);
+    /*background-color: #fef6f9 /*rgb(248, 238, 243);*/
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* or center if preferred */
+    padding: 45px;
+  }
+
+.logo h1 {
+    position: relative;
+    top: -150px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    color: #01103c; 
+    margin: 0;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    top: -100px;
+    width: 400px;
+    margin-right: 20px;
+  }
+
+.hero-image {
+    width: 100%;
+    display: block;
+    height: auto; 
+}
+
+.icon {
+    position: absolute;
+    width: 40px;
+  }
+
+  .icon-chat {
+    width: 22%;
+    top: 60px;
+    right: 20px;
+  }
+  
+  .icon-linkedin {
+    width: 25%;
+    top: 120px;
+    right: 0px;
+  }
+
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px 10px;
+  }
+
+  .speech-bubble {
+    position: relative;
+    top: -135px;
+    background: #fff;
+    color: #01103c;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  *.speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 25px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #fff;
+  }
+
+.content-container{
+    text-align: center; 
+    margin: 0 auto;
+    max-width: 800px; 
+}
+.images_body{
+    display: flex;
+    justify-content: center;
+}
+
+.image_2 {
+    width: 40%; 
+    height: auto;
+    margin: 20px 0; 
+}
+.text-block {
+    font-size: 1.2rem; 
+    color: #333;
+    line-height: 1.6; 
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.icon-toggle-buttons {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 10px 10px;
+    margin: 0;
+  }
+  
+  .icon-toggle-buttons button {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .icon-toggle-buttons button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .material-icons-outlined {
+    font-size: 24px;
+    color: #333;
+  }
+
+.nav ul li a:hover {
+    color: #555;
+    transition: all 0.5s ease-in-out;
+}
+.dark-mode {
+    background-color: rgb(160, 136, 146);
+    color: rgb(254, 252, 252);
+}
+.dark-mode .header {
+    background-color: rgb(100, 80, 90); 
+    border-bottom: 2px solid rgb(200, 200, 200);
+}
+
+.dark-mode .nav ul li a {
+    color: rgb(254, 252, 252); 
+}
+
+.dark-mode .logo h1 {
+    color: rgb(254, 252, 252); 
+}
+
+.dark-mode p,
+.dark-mode h3,
+.dark-mode .text-block {
+    color: rgb(254, 252, 252)} 
+
+
+.petition-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.petition-para {
+    width: 55%;
+    padding-right: 10px;
+}
+
+.signatures {
+    width: 45%;
+    padding-right: 10px;
+}
+
+.error {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    background-color: pink;
+}
+
+.revealable {
+    position: relative;
+    transform: translateY(150px); 
+    opacity: 0; 
+    transition: all 2s ease; 
+}
+
+.revealable.active {
+    transform: translateY(0); 
+    opacity: 1; 
+}
+
+.animated-element {
+    transition: all 1 ease;
+    animation: slideIn 1s forwards;
+  }
+  
+  .reduce-motion .animated-element,
+.reduce-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4); 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background-color: rgb(207, 214, 228);
+    color: black;
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .thanks-modal-content {
+    width: 20rem;
+  }
+  
+.image_3 {
+    width: 50%; 
+    height: auto;
+    margin: 20px 0; 
+}
+
+.modal-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #383c40; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .modal-button:hover {
+    background-color: #858688; 
+  }
+ 
