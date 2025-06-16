@@ -7,7 +7,7 @@
    <link rel="stylesheet" href="styles.css" />
    <link rel="icon" href="favicon.ico" type="image/x-icon" />
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> 
 </head>
 
 <body>
@@ -27,15 +27,29 @@
         </ul>
     </nav>
 
+    <!-- Main Header Section -->
+    <header class="main-header">
+        <h1></h1> <!-- our website name or logo -->
+        <nav class="bubble-nav">
+            <a href="#home" class="bubble-link">Home</a>
+            <a href="#networking" class="bubble-link">Networking</a>
+            <a href="#interviews" class="bubble-link">Interviews</a>
+            <a href="#Empowerment" class="bubble-link">Empowerment</a>
+          </nav>
+      </header>
+
    <!-- Header Section -->
    <div class="hero-section">
     <div class="logo">
         <h1>Empowering</h1>
         <h1>Women in</h1>  
         <h1>Tech</h1>
+      <div class="chatbot-trigger">
         <button class="speech-bubble">Hi! Need any help?</button>
+      </div>
     </div>
 
+    <!-- Image Wrapper -->
     <div class="hero-image-wrapper">
         <img src="images/woman.png" alt="Woman working on laptop" class="hero-image" />
         <img src="images/icon-chat.png" class="icon icon-chat" alt="Chat icon">
@@ -43,22 +57,122 @@
     </div>
   </div>
 
-   <!-- Content Section -->
-   <div class="content-container">
-       <h2></h2>
+  <section id="networking" class="page-section">
+    <div>
+      <h2>Networking doesn’t have to be awkward.</h2> 
+      <h2>Let’s make connections feel natural.</h2>
+      </div>
 
-       <!-- Image Row -->
-       <div class="hero-illustration revealable">
-           
-           <img class="image_2" src="images/sample2.png" alt="Image 2" />
-       </div>
+<!-- Networking Cards Section -->
+<div class="networking-cards">
+    <div class="networking-container">
+        <img src="images/icon-message.png" class="icon-message" icon-linkedin" alt="Email icon">
+      <h3>Cold Emails 101</h3>
+      <p>What they are, when to send them, how to follow up</p>
+      <button id="build-email-btn">Build My Email</button>
+    </div>
 
-       <!-- Mission Section -->
+    <div class="networking-container">
+      <img src="images/icon-linkedin.png" class="icon-two-linkedin" icon-linkedin" alt="LinkedIn icon">
+      <h3>LinkedIn Basics</h3>
+      <p>Strong profile tips, standout headline & banner</p>
+      <button id="edit-linkedin-btn">Edit My LinkedIn</button>
+
+<div id="linkedin-helper" class="hidden helper-box">
+  <h3>LinkedIn Profile Helper</h3>
+  <label>Current Headline:</label>
+  <input type="text" id="headline-input" placeholder="Your current headline">
+  <button id="suggest-headline-btn">Suggest Alternatives</button>
+
+  <ul class="checklist">
+    <li>✅ Featured section added?</li>
+    <li>✅ Custom banner uploaded?</li>
+  </ul>
+
+  <div class="examples-carousel">
+    <p><em>Examples:</em> “Software Engineer passionate about AI | Open to new opportunities”</p>
+  </div>
+</div>
+    </div>
+
+    <div class="networking-container networking-container-three">
+        <img src="images/woman2.png" class="women-two" icon-linkedin" alt="Woman2 icon">
+      <h3>Reaching Out IRL & Online</h3>
+      <p>Approach people at events, coffee chats, virtual panels</p>
+      <button>Chat Prompt Generator</button>
+    </div>
+  </div>
+
+  <div id="message-templates" class="page-section hidden">
+    <div class="template-header">
+      <h2>Message Templates</h2>
+      <div class="template-actions">
+        <button class="speech-bubble-btn">Try a Message Draft</button>
+        <button class="speech-bubble-btn">Find a Template</button>
+        <div class="template-close">
+          <button id="close-template-btn" aria-label="Close template">×</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="template-box">
+      <div class="filter-group">
+        <label for="messageType">Filter by goal:</label>
+        <select id="messageType" name="messageType">
+          <option value="">Select a message type</option>
+          <option value="recruiter">Message to recruiter</option>
+          <option value="peer">Message to peer</option>
+          <option value="followup">Follow-up message</option>
+          <option value="thankyou">Thank you message</option>
+          <option value="reconnect">Reconnect message</option>
+        </select>
+      </div>
+  
+      <div class="template-editor">
+        <textarea rows="6" placeholder="Select a template or start typing...">Hi [Name],
+  
+I saw your recent post on [topic] and I’d love to connect and hear more about your work!
+  
+Best</textarea>
+      </div>
+  
+      <p class="instructions">Choose a message → Edit → Copy to clipboard</p>
+  
+      <div class="template-bottom-actions">
+        <button class="tone-check-btn">Tone Check</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="flip-card-section">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">What brings you here today?</div>
+        <div class="flip-card-back">I’m looking to meet others passionate about X — what about you?</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="chatbot-bubble" onclick="toggleChat()">
+    💬 Need help?
+  </div>
+  
+  <div id="chatbot-window" class="chatbot-window hidden">
+    <div class="chatbot-header">Chatbot</div>
+    <div class="chatbot-messages">
+      <p>Hello! How can I help you today?</p>
+    </div>
+    <input type="text" placeholder="Type your message..." onkeydown="handleInput(event)">
+  </div>
+
+       <!-- Mission Section 
        <div class="revealable text-block">
            <p>Our mission is to empower and inspire through impactful design and inclusive technology.</p>
            <button class="tb_bttn">Learn More</button>
            <button class="tb_bttn">Sign Up!</button>
            <button>Contact Us</button>
        </div>
-
-       
+    -->
+       <script src="script.js"></script>
+    </body>    
