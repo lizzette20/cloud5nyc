@@ -164,7 +164,68 @@ Best</textarea>
       <p>Hello! How can I help you today?</p>
     </div>
     <input type="text" placeholder="Type your message..." onkeydown="handleInput(event)">
+  </div><!-- Toolkit Section -->
+<section class="toolkit-section">
+  <header class="toolkit-header">
+    <h1>Level Up Your Toolkit</h1>
+    <p>Everything you need to shine in your job search</p>
+  </header>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/resume.png" alt="Resume Icon" />
+      <h2>Resume</h2>
+      <p>Craft a resume that reflects your impact—download templates, see examples, and get tips.</p>
+      <button onclick="handleClick('resume')">Build My Resume</button>
+    </div>
+
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/open-envelope.png" alt="Cover Letter Icon" />
+      <h2>Cover Letter</h2>
+      <p>Learn how to tailor your story—step-by-step guides and real samples.</p>
+      <button onclick="handleClick('coverLetter')">Write a Cover Letter</button>
+    </div>
+
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/speech-bubble.png" alt="Interview Icon" />
+      <h2>Interviews</h2>
+      <p>Practice Q&A, learn how to tell your story, and prep with confidence.</p>
+      <button onclick="handleClick('interview')">Prep for Interviews</button>
+    </div>
   </div>
+</section>
+
+<!-- Office Etiquette Section -->
+<section class="etiquette-section">
+  <div class="container">
+    <h1 class="title">Office Etiquette</h1>
+    <p class="subtitle">Show up with confidence. Navigate the workplace with ease.</p>
+
+    <div class="cards">
+      <div class="card">
+        <img src="https://img.icons8.com/external-flat-juicy-fish/60/000000/external-light-bulb-creative-thinking-flat-flat-juicy-fish.png" alt="Professional Presence" class="icon">
+        <h2>Professional Presence</h2>
+        <p>Make a strong impression with positive body language and professionalism</p>
+        <button onclick="chat('Professional Presence')">Chat with Us</button>
+      </div>
+
+      <div class="card">
+        <img src="https://img.icons8.com/fluency-systems-filled/60/000000/chat--v1.png" alt="Communication" class="icon">
+        <h2>Communication</h2>
+        <p>Master clear and respectful communication in any situation.</p>
+        <button onclick="chat('Communication')">Chat with Us</button>
+      </div>
+
+      <div class="card">
+        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/60/000000/external-coffee-cup-coffee-shop-flatart-icons-outline-flatarticons.png" alt="Community and Culture" class="icon">
+        <h2>Community & Culture</h2>
+        <p>Adapt to company norms with openness and respect</p>
+        <button onclick="chat('Community & Culture')">Chat with Us</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
        <!-- Mission Section 
        <div class="revealable text-block">
@@ -175,4 +236,4 @@ Best</textarea>
        </div>
     -->
        <script src="script.js"></script>
-    </body>    
+    </body>   

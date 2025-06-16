@@ -643,6 +643,158 @@ body {
     border: none;
     border-top: 1px solid #eee;
   }
+/* Toolkit Section Styles */
+.toolkit-section {
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #f7f2fb, #e7e2f6);
+  text-align: center;
+}
+
+.toolkit-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.toolkit-header p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 280px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.card button {
+  background: linear-gradient(to right, #e48edb, #8181f0);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background: linear-gradient(to right, #d77cc8, #6f6fd9);
+}
+/* Office Etiquette Section */
+.etiquette-section {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #fef0f6, #eef3fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.etiquette-section .container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.etiquette-section .title {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
+}
+
+.etiquette-section .subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+.etiquette-section .cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.etiquette-section .card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  width: 290px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.etiquette-section .card:hover {
+  transform: translateY(-6px);
+}
+
+.etiquette-section .icon {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.etiquette-section .card h2 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.etiquette-section .card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.etiquette-section button {
+  background-color: #4c60ff;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.etiquette-section button:hover {
+  background-color: #3b4acc;
+}
 
   /* Media queries for different screen sizes */
 @media (max-width: 768px) {
