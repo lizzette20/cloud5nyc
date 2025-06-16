@@ -668,6 +668,7 @@ body {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  border-radius: 999px;
 }
 
 .card {
@@ -690,6 +691,7 @@ body {
 
 .card h2 {
   font-size: 20px;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -729,7 +731,9 @@ body {
 }
 
 .etiquette-section .title {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+
   font-size: 3rem;
   color: #2c2c2c;
   margin-bottom: 0.5rem;
@@ -762,12 +766,18 @@ body {
 }
 
 .etiquette-section .icon {
-  height: 60px;
+  position: relative;
+  left: -;
+  height: 80px;
+  width: auto;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
 .etiquette-section .card h2 {
   font-size: 1.3rem;
+  font-family: 'Poppins', sans-serif;
   margin: 0.5rem 0;
   font-weight: 700;
   color: #1a1a1a;
