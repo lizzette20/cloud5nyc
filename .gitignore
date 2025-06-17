@@ -1,0 +1,14 @@
+# Ignore environment files
+.env
+
+# Ignore Python app files you don't want tracked
+chatbot_api.py
+
+# Ignore virtual environment (if you have one)
+venv/
+
+# Ignore OS / IDE files (optional good practice)
+.DS_Store
+*.log
+
+/secrets/service-account.json
