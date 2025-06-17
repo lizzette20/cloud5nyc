@@ -1,3 +1,8 @@
+document.getElementById("chat-prompt-btn").addEventListener("click", function() {
+  const flipCard = document.getElementById("flip-card-container");
+  flipCard.classList.toggle("hidden-flip");
+});
+
 document.getElementById("build-email-btn").addEventListener("click", function() {
     const templateBox = document.getElementById("message-templates");
     templateBox.classList.toggle("hidden");
@@ -9,9 +14,6 @@ document.getElementById("build-email-btn").addEventListener("click", function() 
     const templateBox = document.getElementById("message-templates");
     templateBox.classList.add("hidden");
   });  
-  document.getElementById("edit-linkedin-btn").addEventListener("click", function() {
-    document.getElementById("linkedin-helper").classList.toggle("hidden");
-  });
   function handleClick(section) {
   switch (section) {
     case 'resume':
@@ -30,3 +32,12 @@ document.getElementById("build-email-btn").addEventListener("click", function() 
 function chat(topic) {
   alert(`Starting chat about: ${topic}`);
 }
+
+window.onload = function() {
+  const themeButton = document.getElementById("theme-button");
+
+  themeButton.addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+  });
+};
+

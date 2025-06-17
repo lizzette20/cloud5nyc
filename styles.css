@@ -1,42 +1,80 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #fde2e4,#e1e1f7,#deeaf3);
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #fde2e4, #e1e1f7, #deeaf3);
+  font-family: 'Poppins', sans-serif;
+}
+
+.bubble-nav .bubble-link {
+  background: #f1f0f0;
+}
+
+body.dark-mode {
+  background: #121212 !important;
+  color: #f1f1f1 !important;    
+}
+
+/* Example dark styles for other elements */
+body.dark-mode .nav {
+  background: #1f1f1f;
+}
+
+body.dark-mode .bubble-link {
+  background: #2c2c2c;
+  color: #f1f1f1;
+}
+
+body.dark-mode .networking-container,
+body.dark-mode .card {
+  background: #1f1f1f;
+  color: #f1f1f1;
+}
+
+body.dark-mode .bubble-link:hover {
+  background: #333;
+  color: #ddd;
 }
 
 .hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    padding: 45px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-.logo h1 {
-    position: relative;
-    top: -235px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 60px;
-    font-weight: 600;
-    color: #01103c; 
-    margin: 0;
 }
 
-/* image styles */
+.hero-text {
+  max-width: 500px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: #01103c;
+  margin:0;
+}
+
+#hero-description {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333;
+}
+
 .hero-image-wrapper {
-    position: relative;
-    top: -190px;
-    width: 400px;
-    margin-right: 20px;
-  }
+  max-width: 400px;
+}
 
 .hero-image {
     width: 100%;
-    display: block;
     height: auto; 
+    display: block;
 }
 /* icon styles */
-  .icon-wrapper {
+ .icon-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
@@ -49,29 +87,31 @@ body {
     width: 100%;
     height: auto;
   }
-   .icon {
-    position: absolute;
-    width: 40px;
+
+  .icon  {
+    width: 100px;         /* or try % if inside a parent with set width */
+    height: 100px;        /* keep proportions */
   }
 
   .icon-chat {
-    width: 22%;
-    top: 60px;
-    right: 20px;
+    position: absolute;
+    top: 167px;            /* adjust as needed */
+    right: 285px;         /* adjust as needed */       /* maintain aspect ratio */
   }
   
   .icon-linkedin {
-    width: 25%;
-    top: 120px;
-    right: 0px;
+    position: absolute;
+    top: 245px;            /* adjust as needed */
+    right: 275px;  
+  
   }
 
   .nav {
     display: flex;
-    justify-content: flex-end;  /* Pushes content to the right */
-    padding: 1rem;
+    justify-content: flex-end;
     position: relative;
-    top: 10px;  
+    bottom: -15px;
+    left: -15px;
   }
 
   .icon-toggle-buttons {
@@ -86,10 +126,11 @@ body {
     display: inline-block;
   }
   
+
   .icon-toggle-buttons button {
-    background-color: #fdfdfd;        /* light mode background */
+    background-color: #fdfdfd;
     border: none;
-    border-radius: 50px;             
+    border-radius: 50px;
     padding: .5rem 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -105,10 +146,8 @@ body {
     transition: color 0.3s ease;
   }
   
-  /* Hover (light mode) */
   .icon-toggle-buttons button:hover {
     background-color: #e6f2ff;
-    border-color: #8ac8ff;
     box-shadow: 0 0 10px rgba(138,200,255,0.3);
   }
   
@@ -123,40 +162,16 @@ body {
     z-index: 1000;
   }
 
-/* Speech bubble arrow */
-  .speech-bubble {
-    position: relative;
-    top: -220px;
-    background: #fff;
-    color: #01103c;
-    border: none;
-    padding: 13px 20px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-
-  .speech-bubble:hover {
-    background-color: #e5d9f4;
-    border-color: #c8a6f3;
-    color: #480972;
-  }
-
 /* header styles */
   .bubble-nav {
     position: relative;
-    top: -83px;
+    top: -50px; 
+    right: -35px;
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 5.5px;
-    margin: 30px;
     background: transparent;
-    gap: 10px;
+    gap: 1rem;
   }
   
   .bubble-link {
@@ -168,11 +183,9 @@ body {
     text-decoration: none;
     color: #202124;
     font-weight: 600;
-    position: relative;
     display: inline-block;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    
   }
   
   .bubble-link:hover {
@@ -289,7 +302,7 @@ body {
   }
 
 .networking-container h3 {
-    font-size: 1,5rem;
+    font-size: 1.5rem;
     font-weight: 600;
     position: relative;
     top: -110px;
@@ -500,68 +513,16 @@ body {
     color: #2e2e34;
   }
 
-  .helper-box {
-    position: relative;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 350px;
-    margin: 1rem auto;
-    height: auto;
+  .flip-card-section {
+    display: flex;
+    padding-left: 58rem;
   }
 
-  #linkedin-helper h3 {
-    font-size: 1.4rem;
-    color: #18191b;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-  }
-
-  #linkedin-helper label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: #333;
-  }
-
-  .helper-box input {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0 1rem 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .checklist {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    text-align: left;
-  }
-  
-  .examples-carousel {
-    margin-top: 1rem;
-  }
-
-  .prompt-card {
-    background: #f1f3f4;
-    border: 1px solid #dadce0;
-    padding: 0.5rem;
-    border-radius: 8px;
-    margin: 0.5rem 0;
-  }
-  
   .flip-card {
-    position: relative;
-    top: -475px;
     background: transparent;
     width: 300px;
     height: 200px;
-    perspective: 1000px;
-    margin: 1px 900px;
+    perspective: 5000px;
   }
   
   .flip-card-inner {
@@ -590,12 +551,16 @@ body {
     border: 1px solid #ddd;
     border-radius: 12px;
     background: #fde2e4;
-    padding: 1rem;
   }
   
   .flip-card-back {
     transform: rotateY(180deg);
   }
+
+  .hidden-flip {
+    display: none;
+  }
+  
   
   .chatbot-bubble {
     position: fixed;
@@ -702,12 +667,13 @@ body {
 }
 
 .card button {
+  font-family: poppins, sans-serif;
   background: linear-gradient(to right, #e48edb, #8181f0);
   border: none;
   color: white;
   padding: 10px 20px;
   font-size: 14px;
-  border-radius: 10px;
+  border-radius: 999px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -733,9 +699,7 @@ body {
 .etiquette-section .title {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-
-  font-size: 3rem;
-  color: #2c2c2c;
+  font-size: 2.2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -767,7 +731,7 @@ body {
 
 .etiquette-section .icon {
   position: relative;
-  left: -;
+  
   height: 80px;
   width: auto;
   justify-content: center;
@@ -775,7 +739,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.etiquette-section .card h2 {
+.etiquette-section .card h3 {
   font-size: 1.3rem;
   font-family: 'Poppins', sans-serif;
   margin: 0.5rem 0;
@@ -791,13 +755,13 @@ body {
 }
 
 .etiquette-section button {
+  font-family: poppins, sans-serif;
   background-color: #4c60ff;
   color: white;
   padding: 0.6rem 1.5rem;
   border: none;
   border-radius: 25px;
   font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }

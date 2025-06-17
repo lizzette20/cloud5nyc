@@ -10,6 +10,7 @@
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> 
 </head>
 
+
 <body>
     <!-- Nav Section -->
     <nav class="nav">
@@ -33,25 +34,31 @@
         <nav class="bubble-nav">
             <a href="#home" class="bubble-link">Home</a>
             <a href="#networking" class="bubble-link">Networking</a>
-            <a href="#Career Prep" class="bubble-link">Career Prep</a>
-            <a href="#Etiquette" class="bubble-link">Etiquette</a>
+            <a href="#career-prep" class="bubble-link">Career Prep</a>
+            <a href="#etiquette" class="bubble-link">Etiquette</a>
           </nav>
       </header>
 
    <!-- Header Section -->
    <div class="hero-section">
-    <div class="logo">
+    <div class="hero-text">
+      <div class="logo">
         <h1>Empowering</h1>
         <h1>Women in</h1>  
         <h1>Tech</h1>
-      <div class="chatbot-trigger">
-        <button class="speech-bubble">Hi! Need any help?</button>
       </div>
+      <p id="hero-description">
+        Empowering women to use their voice boldly, communicate confidently, and lead with impact in every room they walk into
+      </p>
+    </div>
+  
+    <div class="hero-image-wrapper">
+      <img src="images/woman.png" alt="Woman working on laptop" class="hero-image" />
     </div>
 
+
     <!-- Image Wrapper -->
-    <div class="hero-image-wrapper">
-        <img src="images/woman.png" alt="Woman working on laptop" class="hero-image" />
+    <div class="icon-image-wrapper">
         <img src="images/icon-chat.png" class="icon icon-chat" alt="Chat icon">
         <img src="images/icon-linkedin.png" class="icon icon-linkedin" alt="LinkedIn icon">
     </div>
@@ -66,7 +73,7 @@
 <!-- Networking Cards Section -->
 <div class="networking-cards">
     <div class="networking-container">
-        <img src="images/icon-message.png" class="icon-message" icon-linkedin" alt="Email icon">
+        <img src="images/icon-message.png" class="icon-message" alt="Email icon">
       <h3>Cold Emails 101</h3>
       <p>What they are, when to send them, how to follow up</p>
       <button id="build-email-btn">Build My Email</button>
@@ -77,29 +84,13 @@
       <h3>LinkedIn Basics</h3>
       <p>Strong profile tips, standout headline & banner</p>
       <button id="edit-linkedin-btn">Edit My LinkedIn</button>
-
-<div id="linkedin-helper" class="hidden helper-box">
-  <h3>LinkedIn Profile Helper</h3>
-  <label>Current Headline:</label>
-  <input type="text" id="headline-input" placeholder="Your current headline">
-  <button id="suggest-headline-btn">Suggest Alternatives</button>
-
-  <ul class="checklist">
-    <li>✅ Featured section added?</li>
-    <li>✅ Custom banner uploaded?</li>
-  </ul>
-
-  <div class="examples-carousel">
-    <p><em>Examples:</em> “Software Engineer passionate about AI | Open to new opportunities”</p>
-  </div>
-</div>
     </div>
 
     <div class="networking-container networking-container-three">
         <img src="images/woman2.png" class="women-two" icon-linkedin" alt="Woman2 icon">
       <h3>Reaching Out IRL & Online</h3>
       <p>Approach people at events, coffee chats, virtual panels</p>
-      <button>Chat Prompt Generator</button>
+      <button id="chat-prompt-btn">Chat Prompt Generator</button>
     </div>
   </div>
 
@@ -145,15 +136,15 @@ Best</textarea>
   </div>
 
   
-  <div class="flip-card-section">
-    <div class="flip-card">
+  <div id="flip-card-container" class="flip-card-section hidden-flip">
+    <div class="flip-card" id="flip-card-clickable">
       <div class="flip-card-inner">
         <div class="flip-card-front">What brings you here today?</div>
         <div class="flip-card-back">I’m looking to meet others passionate about X — what about you?</div>
       </div>
     </div>
   </div>
-  
+
   <div class="chatbot-bubble" onclick="toggleChat()">
     💬 Need help?
   </div>
@@ -164,8 +155,11 @@ Best</textarea>
       <p>Hello! How can I help you today?</p>
     </div>
     <input type="text" placeholder="Type your message..." onkeydown="handleInput(event)">
-  </div><!-- Toolkit Section -->
-<section class="toolkit-section">
+  </div>
+  
+  
+  <!-- Toolkit Section -->
+<section  id="career-prep" class="toolkit-section">
   <header class="toolkit-header">
     <h1>Level Up Your Toolkit</h1>
     <p>Everything you need to shine in your job search</p>
@@ -176,7 +170,7 @@ Best</textarea>
       <img src="images/resume pic.png" alt="Resume Icon" />
       <h2>Resume</h2>
       <p>Craft a resume that reflects your impact—download templates, see examples, and get tips.</p>
-      <button onclick="handleClick('resume')">Build My Resume</button>
+      <button class= "resume-btn" onclick="handleClick('resume')">Build My Resume</button>
     </div>
 
     <div class="card">
@@ -196,7 +190,7 @@ Best</textarea>
 </section>
 
 <!-- Office Etiquette Section -->
-<section class="etiquette-section">
+<section id="etiquette" class="etiquette-section">
   <div class="container">
     <h3 class="title">Office Etiquette</h3>
     <p class="subtitle">Show up with confidence. Navigate the workplace with ease.</p>
@@ -226,6 +220,9 @@ Best</textarea>
   </div>
 </section>
 
+<div class="email-button-wrapper">
+  <button id="email-button">email</button>
+</div>
 
        <!-- Mission Section 
        <div class="revealable text-block">
@@ -235,5 +232,12 @@ Best</textarea>
            <button>Contact Us</button>
        </div>
     -->
-       <script src="script.js"></script>
-    </body>   
+    <script>
+      document.getElementById("theme-button").addEventListener("click", function() {
+        document.body.classList.toggle("dark-mode");
+      });
+      </script>
+
+    <script src="script.js"></script>
+    </body>  
+    </html> 
