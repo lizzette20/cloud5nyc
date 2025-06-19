@@ -1,4 +1,4 @@
-​<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8" />
@@ -10,7 +10,6 @@
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> 
 </head>
 
-
 <body>
     <!-- Nav Section -->
     <nav class="nav">
@@ -19,225 +18,192 @@
                 <button id="theme-button" title="Toggle Dark Mode">
                   <span class="material-icons-outlined">dark_mode</span>
                 </button>
-              </li>
-              <li>
+            </li>
+            <li>
                 <button id="reduce-motion-btn" title="Reduce Motion">
                   <span class="material-icons-outlined">motion_photos_off</span>
                 </button>
-              </li>
+            </li>
         </ul>
     </nav>
 
     <!-- Main Header Section -->
     <header class="main-header">
-        <h1></h1> <!-- our website name or logo -->
+        <h1></h1>
         <nav class="bubble-nav">
             <a href="#home" class="bubble-link">Home</a>
             <a href="#networking" class="bubble-link">Networking</a>
             <a href="#career-prep" class="bubble-link">Career Prep</a>
             <a href="#etiquette" class="bubble-link">Etiquette</a>
-          </nav>
-      </header>
+        </nav>
+    </header>
 
-   <!-- Header Section -->
-   <div class="hero-section">
-    <div class="hero-text">
-      <div class="logo">
-        <h1>Empowering</h1>
-        <h1>Women in</h1>  
-        <h1>Tech</h1>
-      </div>
-      <p id="hero-description">
-        Empowering women to use their voice boldly, communicate confidently, and lead with impact in every room they walk into
-      </p>
+    <div class="hero-section">
+        <div class="hero-text">
+            <div class="logo">
+                <h1>Empowering</h1>
+                <h1>Women in</h1>
+                <h1>Tech</h1>
+            </div>
+            <p id="hero-description">
+                Empowering women to use their voice boldly, communicate confidently, and lead with impact in every room they walk into
+            </p>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="images/woman.png" alt="Woman working on laptop" class="hero-image" />
+        </div>
+        <div class="icon-image-wrapper">
+            <img src="images/icon-chat.png" class="icon icon-chat" alt="Chat icon">
+            <img src="images/icon-linkedin.png" class="icon icon-linkedin" alt="LinkedIn icon">
+        </div>
     </div>
+    <!--Networking Section-->
+    <section id="networking" class="page-section">
+        <div>
+            <h2>Networking doesn’t have to be awkward.</h2> 
+            <h2>Let’s make connections feel natural.</h2>
+        </div>
+        <div class="networking-cards">
+            <div class="networking-container">
+                <img src="images/icon-message.png" class="icon-message" alt="Email icon">
+                <h3>Cold Emails 101</h3>
+                <p>What they are, when to send them, how to follow up</p>
+                <button id="build-email-btn">Build My Email</button>
+            </div>
+            <div class="networking-container">
+                <img src="images/icon-linkedin.png" class="icon-two-linkedin" alt="LinkedIn icon">
+                <h3>LinkedIn Basics</h3>
+                <p>Strong profile tips, standout headline & banner</p>
+                <button onclick="showChatbotForContext('linkedin')" id="edit-linkedin-btn">Edit My LinkedIn</button>
+            </div>
+            <div class="networking-container networking-container-three">
+                <img src="images/woman2.png" class="women-two" alt="Woman2 icon">
+                <h3>Reaching Out IRL & Online</h3>
+                <p>Approach people at events, coffee chats, virtual panels</p>
+                <button id="chat-prompt-btn" onclick="showChatbotForContext('reachingOut')">Chat Prompt Generator</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="message-templates" class="page-section hidden">
+      <div class="template-header">
+        <h2>Message Templates</h2>
+        <div class="template-actions">
+          <button class="speech-bubble-btn">Try a Message Draft</button>
+          <button class="speech-bubble-btn">Find a Template</button>
+          <div class="template-close">
+            <button id="close-template-btn" aria-label="Close template">×</button>
+          </div>
+        </div>
+      </div>
+      <div class="template-box">
+        <div class="filter-group">
+          <label for="messageType">Filter by goal:</label>
+          <select id="messageType" name="messageType">
+            <option value="">Select a message type</option>
+            <option value="recruiter">Message to recruiter</option>
+            <option value="peer">Message to peer</option>
+            <option value="followup">Follow-up message</option>
+            <option value="thankyou">Thank you message</option>
+            <option value="reconnect">Reconnect message</option>
+          </select>
+        </div>
+        <div class="template-editor">
+          <textarea id="message-textarea" rows="6" placeholder="Select a template or start typing...">Hi [Name],
   
-    <div class="hero-image-wrapper">
-      <img src="images/woman.png" alt="Woman working on laptop" class="hero-image" />
-    </div>
-
-
-    <!-- Image Wrapper -->
-    <div class="icon-image-wrapper">
-        <img src="images/icon-chat.png" class="icon icon-chat" alt="Chat icon">
-        <img src="images/icon-linkedin.png" class="icon icon-linkedin" alt="LinkedIn icon">
-    </div>
-  </div>
-
-  <section id="networking" class="page-section">
-    <div>
-      <h2>Networking doesn’t have to be awkward.</h2> 
-      <h2>Let’s make connections feel natural.</h2>
-      </div>
-
-<!-- Networking Cards Section -->
-<div class="networking-cards">
-    <div class="networking-container">
-        <img src="images/icon-message.png" class="icon-message" alt="Email icon">
-      <h3>Cold Emails 101</h3>
-      <p>What they are, when to send them, how to follow up</p>
-      <button id="build-email-btn">Build My Email</button>
-    </div>
-
-    <div class="networking-container">
-      <img src="images/icon-linkedin.png" class="icon-two-linkedin" icon-linkedin" alt="LinkedIn icon">
-      <h3>LinkedIn Basics</h3>
-      <p>Strong profile tips, standout headline & banner</p>
-      <button id="edit-linkedin-btn">Edit My LinkedIn</button>
-    </div>
-
-    <div class="networking-container networking-container-three">
-        <img src="images/woman2.png" class="women-two" icon-linkedin" alt="Woman2 icon">
-      <h3>Reaching Out IRL & Online</h3>
-      <p>Approach people at events, coffee chats, virtual panels</p>
-      <button id="chat-prompt-btn">Chat Prompt Generator</button>
-    </div>
-  </div>
-
-  <div id="message-templates" class="page-section hidden">
-    <div class="template-header">
-      <h2>Message Templates</h2>
-      <div class="template-actions">
-        <button class="speech-bubble-btn">Try a Message Draft</button>
-        <button class="speech-bubble-btn">Find a Template</button>
-        <div class="template-close">
-          <button id="close-template-btn" aria-label="Close template">×</button>
+  I saw your recent post on [topic] and I’d love to connect and hear more about your work!
+  
+  Best</textarea>
+        </div>
+        <p id="tone-feedback" class="tone-feedback" style="display: none;"></p>
+        <p class="instructions">Choose a message → Edit → Copy to clipboard</p>
+        <div class="template-bottom-actions">
+          <button class="tone-check-btn">Tone Check</button>
         </div>
       </div>
     </div>
   
-    <div class="template-box">
-      <div class="filter-group">
-        <label for="messageType">Filter by goal:</label>
-        <select id="messageType" name="messageType">
-          <option value="">Select a message type</option>
-          <option value="recruiter">Message to recruiter</option>
-          <option value="peer">Message to peer</option>
-          <option value="followup">Follow-up message</option>
-          <option value="thankyou">Thank you message</option>
-          <option value="reconnect">Reconnect message</option>
-        </select>
-      </div>
-  
-      <div class="template-editor">
-        <textarea rows="6" placeholder="Select a template or start typing...">Hi [Name],
-  
-I saw your recent post on [topic] and I’d love to connect and hear more about your work!
-  
-Best</textarea>
-      </div>
-  
-      <p class="instructions">Choose a message → Edit → Copy to clipboard</p>
-  
-      <div class="template-bottom-actions">
-        <button class="tone-check-btn">Tone Check</button>
-      </div>
-    </div>
+    <!-- Career Prep Section -->
+    <section id="career-prep" class="toolkit-section">
+        <header class="toolkit-header">
+            <h1>Level Up Your Toolkit</h1>
+            <p>Everything you need to shine in your job search</p>
+        </header>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/resume pic.png" alt="Resume Icon" />
+                <h2>Resume</h2>
+                <p>Craft a resume that reflects your impact—download templates, see examples, and get tips.</p>
+                <button class="resume-btn" onclick="showChatbotForContext('resume')">Build My Resume</button>
+            </div>
+            <div class="card">
+                <img src="images/mail.png" alt="Cover Letter Icon" />
+                <h2>Cover Letter</h2>
+                <p>Learn how to tailor your story—step-by-step guides and real samples.</p>
+                <button onclick="showChatbotForContext('coverLetter')">Write a Cover Letter</button>
+            </div>
+            <div class="card">
+                <img src="images/interviews.png" alt="Interview Icon" />
+                <h2>Interviews</h2>
+                <p>Practice Q&A, learn how to tell your story, and prep with confidence.</p>
+                <button onclick="showChatbotForContext('interview')">Prep for Interviews</button>
+            </div>
+        </div>
+    </section>
+    <!-- Etiquette Section -->
+    <section id="etiquette" class="etiquette-section">
+        <div class="container">
+            <h3 class="title">Office Etiquette</h3>
+            <p class="subtitle">Show up with confidence. Navigate the workplace with ease.</p>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/lightbulb.png" alt="Professional Presence" class="icon">
+                    <h2>Professional Presence</h2>
+                    <p>Make a strong impression with positive body language and professionalism</p>
+                    <button onclick="showChatbotForContext('professionalPresence')">Chat with Us</button>
+                </div>
+                <div class="card">
+                    <img src="images/chat bubble.png" alt="Communication" class="icon">
+                    <h2>Communication</h2>
+                    <p>Master clear and respectful communication in any situation.</p>
+                    <button onclick="showChatbotForContext('communication')">Chat with Us</button>
+                </div>
+                <div class="card">
+                    <img src="images/coffee.png" alt="Community and Culture" class="icon">
+                    <h2>Community & Culture</h2>
+                    <p>Adapt to company norms with openness and respect</p>
+                    <button onclick="showChatbotForContext('communityCulture')">Chat with Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+<div class="chatbot-container hidden" id="chatbot-container">
+  <div class="chatbot-header">
+      <button class="close-btn" id="close-btn" aria-label="Close">×</button>
+      <span class="chatbot-title">Echo</span>
+      <button class="expand-btn" id="expand-btn" aria-label="Expand">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M4 20 L20 4 M14 4 H20 V10" stroke="white" stroke-width="2" fill="none"/>
+        </svg>
+      </button>
   </div>
-
-  
-  <div id="flip-card-container" class="flip-card-section hidden-flip">
-    <div class="flip-card" id="flip-card-clickable">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">What brings you here today?</div>
-        <div class="flip-card-back">I’m looking to meet others passionate about X — what about you?</div>
+  <div class="chatbot-body">
+      <p class="chatbot-greeting">Hi! What can I help you with today?</p>
+      <div class="chatbot-options">
+          <button class="chat-option" data-topic="networking">Networking</button>
+          <button class="chat-option" data-topic="resume">Resume Tips</button>
+          <button class="chat-option" data-topic="interview">Interview Prep</button>
       </div>
-    </div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <input type="text" class="chat-input" id="chat-input" placeholder="Type your message...">
   </div>
-
-  <div class="chatbot-bubble" onclick="toggleChat()">
-    💬 Need help?
-  </div>
-  
-  <div id="chatbot-window" class="chatbot-window hidden">
-    <div class="chatbot-header">Chatbot</div>
-    <div class="chatbot-messages">
-      <p>Hello! How can I help you today?</p>
-    </div>
-    <input type="text" placeholder="Type your message..." onkeydown="handleInput(event)">
-  </div>
-  
-  
-  <!-- Toolkit Section -->
-<section  id="career-prep" class="toolkit-section">
-  <header class="toolkit-header">
-    <h1>Level Up Your Toolkit</h1>
-    <p>Everything you need to shine in your job search</p>
-  </header>
-
-  <div class="card-container">
-    <div class="card">
-      <img src="images/resume pic.png" alt="Resume Icon" />
-      <h2>Resume</h2>
-      <p>Craft a resume that reflects your impact—download templates, see examples, and get tips.</p>
-      <button class= "resume-btn" onclick="handleClick('resume')">Build My Resume</button>
-    </div>
-
-    <div class="card">
-      <img src="images/mail.png" alt="Cover Letter Icon" />
-      <h2>Cover Letter</h2>
-      <p>Learn how to tailor your story—step-by-step guides and real samples.</p>
-      <button onclick="handleClick('coverLetter')">Write a Cover Letter</button>
-    </div>
-
-    <div class="card">
-      <img src="images/interviews.png" alt="Interview Icon" />
-      <h2>Interviews</h2>
-      <p>Practice Q&A, learn how to tell your story, and prep with confidence.</p>
-      <button onclick="handleClick('interview')">Prep for Interviews</button>
-    </div>
-  </div>
-</section>
-
-<!-- Office Etiquette Section -->
-<section id="etiquette" class="etiquette-section">
-  <div class="container">
-    <h3 class="title">Office Etiquette</h3>
-    <p class="subtitle">Show up with confidence. Navigate the workplace with ease.</p>
-
-    <div class="cards">
-      <div class="card">
-        <img src="images/lightbulb.png" alt="Professional Presence" class="icon">
-        <h2>Professional Presence</h2>
-        <p>Make a strong impression with positive body language and professionalism</p>
-        <button onclick="chat('Professional Presence')">Chat with Us</button>
-      </div>
-
-      <div class="card">
-        <img src="images/chat bubble.png" alt="Communication" class="icon">
-        <h2>Communication</h2>
-        <p>Master clear and respectful communication in any situation.</p>
-        <button onclick="chat('Communication')">Chat with Us</button>
-      </div>
-
-      <div class="card">
-        <img src="images/coffee.png" alt="Community and Culture" class="icon">
-        <h2>Community & Culture</h2>
-        <p>Adapt to company norms with openness and respect</p>
-        <button onclick="chat('Community & Culture')">Chat with Us</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="email-button-wrapper">
-  <button id="email-button">email</button>
 </div>
 
-       <!-- Mission Section 
-       <div class="revealable text-block">
-           <p>Our mission is to empower and inspire through impactful design and inclusive technology.</p>
-           <button class="tb_bttn">Learn More</button>
-           <button class="tb_bttn">Sign Up!</button>
-           <button>Contact Us</button>
-       </div>
-    -->
-    <script>
-      document.getElementById("theme-button").addEventListener("click", function() {
-        document.body.classList.toggle("dark-mode");
-      });
-      </script>
+<div class="chatbot-launcher" id="chatbot-launcher">💬</div>
+
 
     <script src="script.js"></script>
-    </body>  
-    </html> 
+</body>
+</html>
